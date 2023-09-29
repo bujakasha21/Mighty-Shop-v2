@@ -10,7 +10,7 @@ const Product = ({ product }) => {
   const { id, title, image, price, category } = product;
   return (
     <div>
-      <div className=" border-2 rounded-2xl border-mainColor h-[300px] mt-5 mb-2 relative overflow-hidden group transition">
+      <div className=" border-2 rounded-2xl border-mainColor h-[300px] mt-2 mb-2 relative overflow-hidden group transition">
         <div className="card-hover flex w-full h-full  justify-center items-center">
           <div className=" flex w-[200px] mx-auto justify-center items-center">
             <img className=" max-h-[170px]" src={image} alt="" />

@@ -6,6 +6,8 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
+  const [numOfItems, setNumOfItems] = useState(0);
+
   //add item
 
   const addToCart = (product, id) => {
@@ -81,6 +83,7 @@ const CartProvider = ({ children }) => {
         clearCart,
         increaseItem,
         decreaseItem,
+        numOfItems,
       }}
     >
       {children}

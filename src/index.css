@@ -23,3 +23,9 @@ a {
   transition-duration: 300ms;
   cursor: pointer;
 }
+
+.text-hover:hover {
+  transform: translateY(1px) translateX(2px);
+  text-shadow: -1px 14px 11px rgb(99, 99, 99);
+  transition: all 0.3s;
+}

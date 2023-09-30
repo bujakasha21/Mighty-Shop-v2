@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        mainColor: "#191d1d",
+        mainColor: "#202020",
         secondaryColor: "#2d3030",
       },
     },

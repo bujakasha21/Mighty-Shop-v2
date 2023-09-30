@@ -29,3 +29,18 @@ a {
   text-shadow: -1px 14px 11px rgb(99, 99, 99);
   transition: all 0.3s;
 }
+
+.text-outline {
+  color: black;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.img {
+  border: 3px solid #420303;
+  border-radius: 20px;
+  width: 20rem;
+  height: 22rem;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  margin-bottom: 30px;
+}

@@ -10,7 +10,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
 
-  const { cart, clearCart } = useContext(CartContext);
+  const { cart, clearCart, numOfItems, total } = useContext(CartContext);
 
   return (
     <div
@@ -25,9 +25,11 @@ const Sidebar = () => {
         >
           <AiOutlineArrowRight className="text-2xl ml-2" />
         </div>
-        <h3 className="capitalize text-2xl font-primary">Shopping Bag (0)</h3>
+        <h3 className="capitalize text-2xl font-primary">
+          Shopping Bag ({numOfItems})
+        </h3>
       </div>
-      <div>
+      <div className=" flex flex-col gap-y-2 h-[5200px] lg:h-[600px] overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItems item={item} key={item.id} />;
         })}
@@ -35,7 +37,7 @@ const Sidebar = () => {
       <div className="flex flex-col gap-y-3 py-4 mt-4">
         <div className=" flex justify-between items-center w-full">
           <div className="uppercase font-primary text-2xl">
-            <span className="mr-2">Total: </span>$1000
+            <span className="mr-2">Total: </span>${parseFloat(total).toFixed(2)}
           </div>
           <div
             onClick={clearCart}
@@ -44,6 +46,15 @@ const Sidebar = () => {
             <span>Empty Cart</span>
           </div>
         </div>
+        <Link
+          to="/"
+          className="flex p-4 items-center justify-center border-2 border-mainColor rounded-lg text-mainColor font-secondary font-bold text-2xl"
+        >
+          View Cart
+        </Link>
+        <Link className="flex p-4 items-center justify-center border-2 rounded-lg border-mainColor bg-red-900 font-secondary text-2xl">
+          Checkout
+        </Link>
       </div>
     </div>
   );

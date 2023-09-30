@@ -8,6 +8,28 @@ const CartProvider = ({ children }) => {
 
   const [numOfItems, setNumOfItems] = useState(0);
 
+  // total price
+
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    const total = cart.reduce((acc, currentItem) => {
+      return acc + currentItem.price * currentItem.amount;
+    }, 0);
+    setTotal(total);
+  });
+
+  //update item amount
+
+  useEffect(() => {
+    if (cart) {
+      const amount = cart.reduce((acc, currentItem) => {
+        return acc + currentItem.amount;
+      }, 0);
+      setNumOfItems(amount);
+    }
+  }, [cart]);
+
   //add item
 
   const addToCart = (product, id) => {
@@ -84,6 +106,7 @@ const CartProvider = ({ children }) => {
         increaseItem,
         decreaseItem,
         numOfItems,
+        total,
       }}
     >
       {children}

@@ -26,23 +26,26 @@ const DetailsProduct = () => {
   return (
     <section className="pt-32 pb-12 lg:py-32 h-screen">
       <div className="flex w-full mx-auto">
-        <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center">
           <div className="flex flex-1 justify-center items-center mb-16 lg:mb-2">
             <img
-              className="max-w-[250px] lg:max-w-[300px]:"
+              className="max-w-[250px] lg:max-w-[350px]:"
               src={image}
               alt=""
             />
           </div>
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="flex justify-center items-center text-[30px] font-primary mb-1 max-w-[450px] lg:mx-0">
+            <h1 className="flex justify-center lg:justify-start items-center text-[30px] font-primary mb-1 w-full lg:mx-0">
               {title}
             </h1>
             <div className="text-red-700 font-secondary font-bold text-2xl mb-4">
               ${price}
             </div>
-            <p className="max-w-[600px] mb-8">{description}</p>
-            <button onClick={() => addToCart(product, product.id)}>
+            <p className="max-w-[600px] mx-20 lg:mx-0 mb-8">{description}</p>
+            <button
+              className="border rounded-lg text-2xl py-2 px-5 text-white font-secondary bg-red-900 hover:bg-mainColor hover:text-white transition"
+              onClick={() => addToCart(product, product.id)}
+            >
               Add To Bag
             </button>
           </div>

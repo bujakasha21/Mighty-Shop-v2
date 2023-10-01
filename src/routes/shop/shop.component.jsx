@@ -14,7 +14,7 @@ const Shop = () => {
 
   return (
     <>
-      <section className="py-18">
+      <section className="py-18 mb-20">
         <div className="container mx-auto">
           <h1 className="flex items-center justify-start mt-16 pb-8 font-primary text-6xl border-b">
             shop

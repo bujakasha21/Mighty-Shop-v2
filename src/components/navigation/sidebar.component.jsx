@@ -35,24 +35,19 @@ const Sidebar = () => {
         })}
       </div>
       <div className="flex flex-col gap-y-3 py-4 mt-4">
-        <div className=" flex justify-between items-center w-full">
+        <div className=" flex justify-between items-center w-full mb-10">
           <div className="uppercase font-primary text-2xl">
             <span className="mr-2">Total: </span>${parseFloat(total).toFixed(2)}
           </div>
           <div
             onClick={clearCart}
-            className="flex justify-center items-center p-3 cursor-pointer bg-mainColor text-white text-xl font-secondary w-[120px] h-12 "
+            className="flex justify-center items-center p-3 cursor-pointer bg-mainColor text-white text-xl font-secondary w-[120px] h-12 hover:bg-gray-700 transition"
           >
             <span>Empty Cart</span>
           </div>
         </div>
-        <Link
-          to="/"
-          className="flex p-4 items-center justify-center border-2 border-mainColor rounded-lg text-mainColor font-secondary font-bold text-2xl"
-        >
-          View Cart
-        </Link>
-        <Link className="flex p-4 items-center justify-center border-2 rounded-lg border-mainColor bg-red-900 font-secondary text-2xl">
+
+        <Link className="flex p-4 items-center justify-center border-2 rounded-lg border-mainColor bg-red-900 font-secondary text-2xl hover:bg-transparent hover:text-red-900 hover:font-bold transition">
           Checkout
         </Link>
       </div>

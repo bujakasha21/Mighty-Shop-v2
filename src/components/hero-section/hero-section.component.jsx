@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="bg-mainColor h-[800px]">
+    <section className="bg-gradient-to-r from-black to-mainColor h-[800px]">
       <div className="flex flex-row justify-between mx-auto h-full">
         <div className=" ml-[70px] mt-[100px] w-[700px]">
           <h1 className="flex justify-center text-transparent font-primary text-[120px] text-outline opacity-80">
@@ -22,13 +22,13 @@ const Hero = () => {
           <div className=" flex justify-end mr-5 mt-5">
             <Link
               to="/sign-in"
-              className="border rounded-lg mr-10 py-2 px-5 text-2xl font-secondary"
+              className="border rounded-lg mr-10 py-2 px-5 text-2xl font-secondary hover:bg-white hover:text-mainColor transition"
             >
               SIGN IN
             </Link>
             <Link
               to="/shop"
-              className="border rounded-lg text-2xl py-2 px-5 font-secondary"
+              className="border rounded-lg text-2xl py-2 px-5 font-secondary bg-red-900 hover:bg-white hover:text-mainColor transition"
             >
               SHOP
             </Link>

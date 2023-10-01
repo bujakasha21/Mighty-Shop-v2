@@ -12,8 +12,8 @@ const Header = () => {
   const { numOfItems } = useContext(CartContext);
 
   return (
-    <header className="flex items-center justify-between bg-mainColor border-b-2  border-secondaryColor shadow-2xl w-full h-[150px] px-20 font-secondary font-semibold text-2xl">
-      <div className="flex flex-row justify-between ml-[70px]  w-[300px] ">
+    <header className="flex items-center justify-between bg-gradient-to-r from-black to-mainColor border-b-2  border-secondaryColor shadow-2xl w-full h-[150px] px-20 font-secondary font-semibold text-2xl">
+      <div className="hidden lg:flex flex-row justify-between ml-[70px]  w-[300px] ">
         <div className="text-hover">
           <Link to={"/"}>HOME</Link>
         </div>
@@ -24,14 +24,14 @@ const Header = () => {
       <div className="flex">
         <Link
           to={"/"}
-          className="text-white text-xl justify-center items-center"
+          className="text-white text-xl sm:flex justify-center items-center"
         >
-          <div className="">
+          <div>
             <MightyLogo className="h-[100px]" />
           </div>
         </Link>
       </div>
-      <div className="flex  justify-between mr-[70px] w-[300px] ">
+      <div className="hidden lg:flex justify-between mr-[70px] w-[300px] ">
         <div className="text-hover">
           <Link to={"/sign-in"}>SIGN IN</Link>
         </div>

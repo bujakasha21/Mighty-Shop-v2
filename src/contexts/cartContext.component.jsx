@@ -1,5 +1,4 @@
 import React, { useState, createContext, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export const CartContext = createContext();
 

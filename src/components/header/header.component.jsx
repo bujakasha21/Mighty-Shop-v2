@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
@@ -21,14 +21,12 @@ const Header = () => {
           <Link to={"/shop"}>SHOP</Link>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex justify-center items-center">
         <Link
           to={"/"}
           className="text-white text-xl sm:flex justify-center items-center"
         >
-          <div>
-            <MightyLogo className="h-[100px]" />
-          </div>
+          <MightyLogo className="h-[100px] " />
         </Link>
       </div>
       <div className="hidden lg:flex justify-between mr-[70px] w-[300px] ">

@@ -16,7 +16,7 @@ const Shop = () => {
     <>
       <section className="py-18 mb-20">
         <div className="container mx-auto">
-          <h1 className="flex items-center justify-start mt-16 pb-8 font-primary text-6xl border-b">
+          <h1 className="flex items-center justify-center md:justify-start mt-16 pb-8 font-primary text-6xl border-b">
             shop
           </h1>
         </div>

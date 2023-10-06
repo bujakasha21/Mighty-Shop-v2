@@ -44,3 +44,14 @@ a {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   margin-bottom: 30px;
 }
+
+.input-style {
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+  height: 3rem;
+  width: 80%;
+  border-bottom: 2px solid #dfdede;
+  background: none;
+  color: rgb(95, 95, 95);
+}

@@ -6,10 +6,13 @@ import { ReactComponent as MightyLogo } from "../../img/logo1.svg";
 
 import { SidebarContext } from "../../contexts/sidebarContext";
 import { CartContext } from "../../contexts/cartContext.component";
+import { UserContext } from "../../contexts/userContext";
+import { SignOutUser } from "../../utils/firebase/firebase.utils";
 
 const Header = () => {
   const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { numOfItems } = useContext(CartContext);
+  const { currentUser } = useContext(UserContext);
 
   return (
     <header className="flex items-center justify-between bg-gradient-to-r from-black to-mainColor border-b-2  border-secondaryColor shadow-2xl w-full h-[150px] px-20 font-secondary font-semibold text-2xl">
@@ -31,7 +34,11 @@ const Header = () => {
       </div>
       <div className="hidden lg:flex justify-between mr-[70px] w-[300px] ">
         <div className="text-hover">
-          <Link to={"/sign-in"}>SIGN IN</Link>
+          {currentUser ? (
+            <Link onClick={SignOutUser}>SIGN OUT</Link>
+          ) : (
+            <Link to={"/sign-in"}>SIGN IN</Link>
+          )}
         </div>
 
         <div

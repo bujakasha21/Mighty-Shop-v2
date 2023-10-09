@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import {
   GooglePopup,
-  createUserDoc,
   signingUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
@@ -14,8 +13,7 @@ const defFormFields = {
 
 const SignIn = () => {
   const signinInGoogleUser = async () => {
-    const { user } = await GooglePopup();
-    await createUserDoc(user);
+    await GooglePopup();
   };
 
   const [formField, setFormField] = useState(defFormFields);
@@ -35,8 +33,8 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      const res = await signingUserWithEmailAndPassword(email, password);
-      console.log(res);
+      const { user } = await signingUserWithEmailAndPassword(email, password);
+
       resetForms();
     } catch (err) {
       switch (err.code) {

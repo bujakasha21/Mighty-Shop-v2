@@ -21,7 +21,7 @@ const CartItems = ({ item }) => {
           <div className="flex justify-between mb-2">
             <Link
               to={`/product/${id}`}
-              className="font-secondary font-semibold text-md uppercase max-w-[240px] text-mainColor hover:underline"
+              className="font-secondary font-semibold text-md uppercase max-w-[210px] text-mainColor hover:underline"
             >
               {title}
             </Link>

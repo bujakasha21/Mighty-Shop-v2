@@ -47,7 +47,10 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <Link className="flex p-4 items-center justify-center border-2 rounded-lg border-mainColor bg-red-900 font-secondary text-2xl hover:bg-transparent hover:text-red-900 hover:font-bold transition">
+        <Link
+          to="/checkout"
+          className="flex p-4 items-center justify-center border-2 rounded-lg border-mainColor bg-red-900 font-secondary text-2xl hover:bg-transparent hover:text-red-900 hover:font-bold transition"
+        >
           Checkout
         </Link>
       </div>

@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ProductContext } from "../../contexts/productContext";
 import Product from "../../components/product/product.component";
+import Spinner from "../../components/spinner/spinner.components";
 
 const Shop = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const products = useContext(ProductContext);
-  //console.log(products);
 
   const productFilter = products.filter((item) => {
     return (
@@ -21,11 +22,16 @@ const Shop = () => {
           </h1>
         </div>
         <div className="container mx-auto mt-16 ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] max-w-sm mx-auto md:max-w-none md:mx-0">
-            {productFilter.map((product) => {
-              return <Product product={product} key={product.id} />;
-            })}
-          </div>
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] max-w-sm mx-auto md:max-w-none md:mx-0">
+              {productFilter &&
+                productFilter.map((product) => (
+                  <Product key={product.id} product={product} />
+                ))}
+            </div>
+          )}
         </div>
       </section>
     </>

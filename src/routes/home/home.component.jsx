@@ -3,6 +3,7 @@ import React from "react";
 import Hero from "../../components/hero-section/hero-section.component";
 import Description from "../../components/description/description.component";
 import HeroShop from "../../components/hero-shop/hero-shop.component";
+import BackToTopButton from "../../components/back-to-top-button/backToTopButton.components";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Description />
       <HeroShop />
+      <BackToTopButton />
     </div>
   );
 };

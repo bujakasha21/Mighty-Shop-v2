@@ -2,6 +2,7 @@ import { useContext } from "react";
 
 import { CartContext } from "../../contexts/cartContext.component";
 import CheckoutItems from "../../components/checkout-items/checkout-items.component";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const { cart, total } = useContext(CartContext);
@@ -16,14 +17,10 @@ const Checkout = () => {
           <CheckoutItems key={items.id} items={items} />
         ))}
       </div>
-      <div className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-around md:border-t border-gray-200 w-[82%] mb-10 mt-10">
-        <button className="border rounded-lg py-2 px-5 text-2xl bg-mainColor text-white font-primary hover:bg-white hover:text-mainColor transition">
-          Pay with card
-        </button>
-        <span className="flex font-primary text-6xl p-10">
-          Total: ${parseFloat(total).toFixed(2)}
-        </span>
-      </div>
+
+      <span className="flex font-primary text-6xl p-16">
+        Total: ${parseFloat(total).toFixed(2)}
+      </span>
     </section>
   );
 };

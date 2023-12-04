@@ -8,6 +8,7 @@ import ProductProvider from "./contexts/productContext";
 import SidebarProvider from "./contexts/sidebarContext.jsx";
 import CartProvider from "./contexts/cartContext.component";
 import { UserProvider } from "./contexts/userContext";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,13 +17,15 @@ root.render(
       <ProductProvider>
         <React.StrictMode>
           <UserProvider>
-              <App />
+            <App />
           </UserProvider>
         </React.StrictMode>
       </ProductProvider>
     </CartProvider>
   </SidebarProvider>
 );
+
+serviceWorkerRegistration.register();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

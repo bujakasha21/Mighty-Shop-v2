@@ -1,11 +1,7 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./routes/home/home.component";
 import DetailsProduct from "./routes/details/details.component";
-
 import Sidebar from "./components/navigation/sidebar.component";
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";

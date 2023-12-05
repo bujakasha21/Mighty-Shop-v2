@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/cartContext.component";
 import CheckoutItems from "../../components/checkout-items/checkout-items.component";
 import { Link } from "react-router-dom";
+import BackToTopButton from "../../components/back-to-top-button/backToTopButton.components";
 
 const Checkout = () => {
   const { cart, total } = useContext(CartContext);
@@ -21,6 +22,7 @@ const Checkout = () => {
       <span className="flex font-primary text-6xl p-16">
         Total: ${parseFloat(total).toFixed(2)}
       </span>
+      <BackToTopButton />
     </section>
   );
 };

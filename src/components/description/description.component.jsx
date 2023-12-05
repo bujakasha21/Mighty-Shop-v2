@@ -5,7 +5,7 @@ import SecondImage from "../../img/D4EE406C-69BA-4288-A9B3-50E8B0D16868.png";
 import ThirdImage from "../../img/5A151FBC-E938-41EE-84F4-C085C3C33D84.png";
 const Description = () => {
   return (
-    <section className=" flex flex-col md:flex-row w-full items-center justify-around py-[5rem] px-[2rem] h-fit">
+    <section className="flex flex-col lg:flex-row w-full items-center lg:justify-evenly py-[5rem] px-[2rem] h-fit">
       <div className="my-10 mx-5 flex flex-col justify-center items-center">
         <div className="flex justify-center">
           <img className="img" src={FirstImage} alt="" />
@@ -13,7 +13,7 @@ const Description = () => {
         <h3 className="font-primary text-3xl text-mainColor border-b-2 border-mainColor mb-8">
           Resilent
         </h3>
-        <p className="font-secondary text-xl text-gray-500 font-semibold w-[400px]">
+        <p className="font-secondary text-lg md:text-xl text-gray-500 font-semibold w-[300px] md:w-[400px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation.
@@ -26,7 +26,7 @@ const Description = () => {
         <h3 className="font-primary text-3xl text-mainColor border-b-2 border-mainColor mb-8">
           Mighty-Minded
         </h3>
-        <p className="font-secondary text-xl text-gray-500 font-semibold w-[400px]">
+        <p className="font-secondary text-lg md:text-xl text-gray-500 font-semibold w-[300px] md:w-[400px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation.
@@ -39,7 +39,7 @@ const Description = () => {
         <h3 className="font-primary text-3xl text-mainColor border-b-2 border-mainColor mb-8">
           Forceful
         </h3>
-        <p className="font-secondary text-xl text-gray-500 font-semibold w-[400px]">
+        <p className="font-secondary text-lg md:text-xl text-gray-500 font-semibold w-[300px] md:w-[400px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation.

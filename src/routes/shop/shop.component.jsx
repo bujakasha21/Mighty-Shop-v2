@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { ProductContext } from "../../contexts/productContext";
 import Product from "../../components/product/product.component";
 import Spinner from "../../components/spinner/spinner.components";
+import BackToTopButton from "../../components/back-to-top-button/backToTopButton.components";
 
 const Shop = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -34,6 +35,7 @@ const Shop = () => {
           )}
         </div>
       </section>
+      <BackToTopButton />
     </>
   );
 };

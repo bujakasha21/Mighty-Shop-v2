@@ -19,7 +19,7 @@ const Checkout = () => {
         ))}
       </div>
 
-      <span className="flex font-primary text-6xl p-16">
+      <span className="flex font-primary text-center text-6xl p-16">
         Total: ${parseFloat(total).toFixed(2)}
       </span>
       <BackToTopButton />

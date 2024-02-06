@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-r from-black to-mainColor w-full h-[650px] md:h-[900px]">
-      <div className=" flex flex-row items-center justify-center h-full lg:justify-between mx-10 ">
-        <div className=" flex flex-col w-full lg:w-[50%] h-full items-center pt-20">
-          <h1 className="flex justify-center font-primary text-[60px] md:text-[120px] text-transparent text-outline opacity-80">
+    <section className="bg-gradient-to-r from-black to-mainColor w-full h-fit pt-20">
+      <div className="flex items-center justify-evenly w-6/7 mx-auto">
+        <div className="flex flex-col items-center md:items-start justify-center pb-10 md:pb-0">
+          <h1 className="flex justify-center font-primary text-[60px] md:text-[100px] text-transparent text-outline opacity-80">
             WELCOME<span className="flex text-[30px] md:text-[80px]">TO</span>
           </h1>
-          <h1 className="flex justify-end text-white font-primary text-[90px] md:text-[180px]">
+          <h1 className="flex justify-end text-white font-primary text-[90px] md:text-[160px]">
             <span className="text-secondaryColor text-[40px] md:text-[100px]">
               THE
             </span>
             MIGHTY
           </h1>
-          <p className="flex justify-center text-white text-sm my-10 md:text-xl md:px-10">
+          <p className="text-white text-center md:text-left w-[18rem] md:w-[25rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation.
@@ -36,8 +36,8 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="hidden lg:flex lg:items-end justify-end lg:w-[50%] h-full">
-          <MightyDog className="w-[500px] lg:mr-16" />
+        <div className="hidden md:flex items-end justify-end h-full">
+          <MightyDog className="w-[28rem]" />
         </div>
       </div>
       {/* <div className="flex flex-row lg:justify-between h-full">

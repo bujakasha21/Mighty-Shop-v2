@@ -15,8 +15,8 @@ const Shop = () => {
   });
 
   return (
-    <>
-      <section className="py-18 mb-20">
+    <section className="w-full py-18 mb-20">
+      <div className="w-6/7 mx-10">
         <div className="container mx-auto">
           <h1 className="flex items-center justify-center md:justify-start mt-16 pb-8 font-primary text-6xl border-b">
             shop
@@ -34,9 +34,9 @@ const Shop = () => {
             </div>
           )}
         </div>
-      </section>
+      </div>
       <BackToTopButton />
-    </>
+    </section>
   );
 };
 

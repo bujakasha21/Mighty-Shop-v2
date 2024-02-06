@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
+import { IoIosArrowBack } from "react-icons/io";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { CartContext } from "../../contexts/cartContext.component";
 
@@ -25,7 +26,13 @@ const DetailsProduct = () => {
 
   return (
     <section className="pt-32 pb-12 lg:py-32 h-fit mb-20">
-      <div className="flex w-full mx-auto ">
+      <div className="flex flex-col w-5/6 mx-auto ">
+        <div className="flex gap-x-2 mb-7">
+          <Link to="/shop" className="flex items-center">
+            <IoIosArrowBack className="text-3xl text-black" />
+            <span className="text-3xl font-primary text-black">Back</span>
+          </Link>
+        </div>
         <div className="flex flex-col lg:flex-row items-center justify-center">
           <div className="flex flex-1 justify-center items-center mb-16 lg:mb-2">
             <img

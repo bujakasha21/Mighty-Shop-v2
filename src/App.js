@@ -9,6 +9,7 @@ import Shop from "./routes/shop/shop.component";
 import SignIn from "./routes/sign-in/sign-in.component";
 import SignUp from "./routes/sign-up/sign-up.component";
 import Checkout from "./routes/checkout/checkout.component";
+import { MigtyMarquee } from "./components/marquee/mighty-marquee.components";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Sidebar />
+        <MigtyMarquee />
         <Footer />
       </Router>
     </div>

@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header className="bg-gradient-to-r from-black to-mainColor border-b-2  border-secondaryColor">
       <div className="mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between w-5/6 mx-auto">
+        <div className="flex items-center justify-between w-11/12 mx-auto">
           <div className="flex items-center">
             <Link to={"/"} className="text-white text-xl flex my-6">
               <MightyLogo className="h-[60px] md:h-[100px]" />

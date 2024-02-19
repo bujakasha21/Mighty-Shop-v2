@@ -15,7 +15,7 @@ const SlidingToTop = (props) => {
   }, [isInView]);
 
   return (
-    <div ref={myRef} className="relative overflow-hidden w-fit">
+    <div ref={myRef} className="relative overflow-hidden w-full">
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },

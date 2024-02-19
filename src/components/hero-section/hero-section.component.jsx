@@ -8,7 +8,7 @@ import SlidingToTop from "../text-effect/slidingToTop";
 const Hero = () => {
   return (
     <section className="bg-gradient-to-r from-black to-mainColor w-full h-fit pt-20">
-      <div className="flex items-center justify-evenly w-6/7 mx-auto">
+      <div className="flex items-center justify-evenly w-6/7 mx-[10rem]">
         <div className="flex flex-col items-center md:items-start justify-center pb-10 md:pb-0">
           <SlidingToRight>
             <h1 className="flex justify-center font-primary text-[60px] md:text-[100px] text-transparent text-outline opacity-80">
